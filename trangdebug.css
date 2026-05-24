@@ -1,0 +1,54 @@
+#debug1 {
+  display: block;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+#loi {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#sua {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+.can {
+  display: flex;
+}
+#debug2 {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  font-weight: 20px;
+  color: #00e5ff;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px #d81111,
+    0 0 10px #d81111,
+    0 0 20px #d81111;
+
+  position: relative;
+  top: 40px;
+  right: 80px;
+  font-size: 30px;
+}
+.debug {
+  background-image: url(bug.jpg);
+  min-height: 100vh;
+  width: 100%;
+}

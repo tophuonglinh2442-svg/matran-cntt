@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang quản lý</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="trangquanly.css" />
+  <body>
+    <div class="trangql">
+      <h1>Quản Lý Ma Trận Kỹ Năng CNTT</h1>
+      <div class="row">
+        <div class="col-4">
+          <i class="bi bi-person-fill-add ok"> Nhập thông tin sinh viên</i>
+          <br />
+          Mã sinh viên <br />
+          <input
+            type="text"
+            class="form-control"
+            id="ma"
+            placeholder="VD:254D4800***"
+            required
+          />
+          Họ và tên <br />
+          <input
+            type="text"
+            class="form-control"
+            id="na"
+            placeholder="VD:Nguyễn Văn A"
+            required
+          />
+          <hr />
+          Đánh giá kỹ năng(Thang điểm 1-10)<br />
+          HTML/CSS <br />
+          <input
+            type="number"
+            class="form-control"
+            id="ht"
+            min="1"
+            max="10"
+            placeholder="1 - 10"
+            required
+          />
+          JavaScript <br />
+          <input
+            type="number"
+            class="form-control"
+            id="j"
+            min="1"
+            max="10"
+            placeholder="1 - 10"
+            required
+          />
+          Bootstrap <br />
+          <input
+            type="number"
+            class="form-control"
+            id="b"
+            min="1"
+            max="10"
+            placeholder="1 - 10"
+            required
+          />
+
+          <button type="button" id="gui">
+            <i class="bi bi-send"></i> Submit dữ liệu
+          </button>
+        </div>
+        <div class="col-8">
+          <i class="bi bi-file-earmark-text-fill kok"
+            >Bảng quản lý ma trận kỹ năng CNTT</i
+          >
+          <br />
+          <table class="table table-hover align-middle mb-1">
+            <thead class="table-secondary">
+              <tr>
+                <th>Mã sinh viên</th>
+                <th>Họ và Tên</th>
+                <th class="text-center">HTML/CSS</th>
+                <th class="text-center">JS</th>
+                <th class="text-center">Bootstrap</th>
+                <th class="text-center">Tổng Điểm</th>
+                <th class="text-center">Số KN > 7</th>
+                <th class="text-center" style="width: 25%">Đánh giá</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+          </table>
+          <div class="d">
+            <i class="bi bi-cloud-minus fs-1"></i> <br />
+            <h4>Chưa có thông tin sinh viên được cập nhật</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="trangquanly.js"></script>
+  </body>
+</html>

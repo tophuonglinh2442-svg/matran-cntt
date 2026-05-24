@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubble Sort</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        background: #f4f4f4;
+        padding-top: 50px;
+      }
+
+      input {
+        padding: 10px;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background: blue;
+        color: white;
+        border: none;
+      }
+
+      .box {
+        background: white;
+        width: 400px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h2>Thuật toán sắp xếp</h2>
+
+      <input type="text" id="arrInput" placeholder="Nhập mảng" />
+
+      <br />
+
+      <button onclick="sortArray()">Sắp xếp</button>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function sortArray() {
+        let input = document.getElementById("arrInput").value;
+
+        let arr = input.split(",").map(Number);
+
+        for (let i = 0; i < arr.length - 1; i++) {
+          for (let j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+              let temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+
+        document.getElementById("result").innerHTML =
+          "Kết quả: " + arr.join(", ");
+      }
+    </script>
+  </body>
+</html>
